@@ -40,7 +40,9 @@ def raspagem(itemBusca, nomeArquivo):
             continue
         finally:
             print(f'Loading... {round((i+1)/(len(Produtos)+1)*100,2)}%\n')
-        
+            
+    chorm.quit()
+    
     pastaTrabalho.save(f'{nomeArquivo}.xlsx')
 
     arquivo = pandas.read_excel(f'{nomeArquivo}.xlsx')
